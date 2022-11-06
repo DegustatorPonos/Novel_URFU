@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/scripts/TestScript.rpy", line 5: expected statement.
+    testVar = 1
+            ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Wed Nov  2 17:25:23 2022
