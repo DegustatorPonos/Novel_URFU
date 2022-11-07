@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/script.rpy", line 2: expected 'word' not found.
-    define (str)NameSpace = null
-           ^
+File "game/scripts/act 1/1-1.rpy", line 68: choice menuitem expects a non-empty block.
+    "Проигнорировать":
+                      ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov  7 17:27:39 2022
+Mon Nov  7 20:15:13 2022

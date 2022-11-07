@@ -1,4 +1,4 @@
-﻿#В лейбле start будет что-то типа __init__
+﻿#В этом скрипте будет что-то типа __init__
 define politeness = 5
 
 define DefaultName = "Николай"
@@ -14,6 +14,9 @@ define unknown = Character("Голос", color="#c9c9c9")
 image bg_bbg = "blackbackground.png"
 image bg_bedroom = "spal`nya ready(defolt).png"
 image bg_kitchen = "kuhnya_melvill.webp"
+image bg_pollysroom = "spal`nya ready(defolt).png"
+image bg_toilet_clean = "ToiletPlaceholder.jpg"
+image bg_toilet_bloody = "ToiletPlaceholder.jpg"
 image blink = "Blink.png"
 # Технический лейбл, перетекает в act1part1
 label start:
