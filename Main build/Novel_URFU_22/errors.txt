@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/act 1/1-1.rpy", line 1: expected 'label_name_declare' not found.
-    label 1dot1:
-         ^
-
-File "game/scripts/script.rpy", line 28: expected 'label_name' not found.
-    jump 1dot1
-        ^
+File "game/scripts/script.rpy", line 2: expected 'word' not found.
+    define (str)NameSpace = null
+           ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov  7 13:20:09 2022
+Mon Nov  7 17:27:39 2022

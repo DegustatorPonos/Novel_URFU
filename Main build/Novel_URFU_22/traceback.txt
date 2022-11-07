@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('blackbackground.png') at 0x00000000055bc130>:
-  File "game/scripts/script.rpy", line 24, in script
+While loading <renpy.display.im.Image object ('blackbackground.png') at 0x000000000535d100>:
+  File "game/scripts/script.rpy", line 17, in script
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию 'Николай')").strip()
-  File "game/scripts/script.rpy", line 24, in <module>
+  File "game/scripts/script.rpy", line 17, in <module>
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию 'Николай')").strip()
 OSError: Couldn't find file 'blackbackground.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 24, in script
+  File "game/scripts/script.rpy", line 17, in script
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию 'Николай')").strip()
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/scripts/script.rpy", line 24, in <module>
+  File "game/scripts/script.rpy", line 17, in <module>
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию 'Николай')").strip()
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 885, in input
     rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
@@ -64,7 +64,7 @@ Full traceback:
     raise IOError("Couldn't find file '%s'." % name)
 OSError: Couldn't find file 'blackbackground.png'.
 
-Windows-10-10.0.19043 AMD64
+Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Mon Nov  7 13:45:54 2022
+Mon Nov  7 17:30:10 2022
