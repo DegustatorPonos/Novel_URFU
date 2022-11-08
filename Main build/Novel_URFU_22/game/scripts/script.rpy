@@ -12,7 +12,7 @@ image MCAngry = "MainCharAngryPlaceholder.png"
 image MCBloody = "MainCharSadBloodyPlaceholder.png"
 
 define polly = Character("Полина", color = "#ab274f")
-image pollyIdle = "PollyIdlePlaceholder.png"
+image pollyIdle = "PollyIdle.png"
 image pollyAngry = "PollyAngryPlaceholder.png"
 
 #Непривязанный к персонажам контент
