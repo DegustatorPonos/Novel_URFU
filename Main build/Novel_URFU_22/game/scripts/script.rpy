@@ -1,6 +1,8 @@
 ﻿#В этом скрипте будет что-то типа __init__
 define politeness = 5
 
+define audio.bassyBGM = "audio/music/BGbass.mp3"
+
 define DefaultName = "Николай"
 define NameSpace = ""
 define mainChar = Character("[NameSpace]", color = "#402b2b")
