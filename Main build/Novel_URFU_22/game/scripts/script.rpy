@@ -6,23 +6,23 @@ define audio.bassyBGM = "audio/music/BGbass.mp3"
 define DefaultName = "Николай"
 define NameSpace = ""
 define mainChar = Character("[NameSpace]", color = "#402b2b")
-image MCIdle = "MainCharIdlePlaceholder.png"
-image MCSad = "MainCharSadPlaceholder.png"
-image MCAngry = "MainCharAngryPlaceholder.png"
-image MCBloody = "MainCharSadBloodyPlaceholder.png"
+image MCIdle = "MainCharIdlePlaceholder.png" #PH
+image MCSad = "MainCharSadPlaceholder.png" #PH
+image MCAngry = "MainCharAngryPlaceholder.png" #PH
+image MCBloody = "MainCharSadBloodyPlaceholder.png" #PH
 
 define polly = Character("Полина", color = "#ab274f")
 image pollyIdle = "PollyIdle.png"
-image pollyAngry = "PollyAngryPlaceholder.png"
+image pollyAngry = "PollyAngryPlaceholder.png" #PH
 
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
 image bg_bbg = "blackbackground.png"
 image bg_bedroom = "spal`nya ready(defolt)(1).png"
-image bg_kitchen = "kuhnya_melvill.webp"
-image bg_pollysroom = "spal`nya ready(defolt).png"
-image bg_toilet_clean = "ToiletPlaceholder.jpg"
-image bg_toilet_bloody = "ToiletPlaceholder.jpg"
+image bg_kitchen = "kitchen.png"
+image bg_pollysroom = "bedroom polini 1.png"
+image bg_toilet_clean = "ToiletPlaceholder.jpg" #PH
+image bg_toilet_bloody = "ToiletPlaceholder.jpg" #PH
 image blink = "Blink.png"
 # Технический лейбл, перетекает в act1part1
 label start:
