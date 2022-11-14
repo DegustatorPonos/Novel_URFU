@@ -1,0 +1,8 @@
+D:\Git\Novel_URFU\ArrayGenerator\Generator\bin\Debug\Generator.exe.config
+D:\Git\Novel_URFU\ArrayGenerator\Generator\bin\Debug\Generator.exe
+D:\Git\Novel_URFU\ArrayGenerator\Generator\bin\Debug\Generator.pdb
+D:\Git\Novel_URFU\ArrayGenerator\Generator\obj\Debug\Generator.csproj.AssemblyReference.cache
+D:\Git\Novel_URFU\ArrayGenerator\Generator\obj\Debug\Generator.csproj.SuggestedBindingRedirects.cache
+D:\Git\Novel_URFU\ArrayGenerator\Generator\obj\Debug\Generator.csproj.CoreCompileInputs.cache
+D:\Git\Novel_URFU\ArrayGenerator\Generator\obj\Debug\Generator.exe
+D:\Git\Novel_URFU\ArrayGenerator\Generator\obj\Debug\Generator.pdb

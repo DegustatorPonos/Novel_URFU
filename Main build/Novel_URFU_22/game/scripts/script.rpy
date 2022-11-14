@@ -1,4 +1,5 @@
 ﻿#В этом скрипте будет что-то типа __init__
+
 define politeness = 5
 
 define audio.bassyBGM = "audio/music/BGbass.mp3"
@@ -27,9 +28,21 @@ image blink = "Blink.png"
 # Технический лейбл, перетекает в act1part1
 label start:
 
+    call generate_GrumblingArray
     scene bg_bbg
+    $a = len(GrumblingArray)
+    mainChar "[a]"
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
     if len(NameSpace) < 1:
         $NameSpace = DefaultName
     
     jump act1part1
+
+init python:
+    def GenerateGrumbling(ammount):
+        for i in range(ammount):
+            return i
+
+
+
+
