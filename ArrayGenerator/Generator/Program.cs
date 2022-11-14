@@ -5,7 +5,7 @@ namespace Generator
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var path = @"D:\Git\Novel_URFU\Main build\Novel_URFU_22\game\scripts\Arrays";
             var origin = path + @"\GrumblingPhrases.txt";
@@ -20,7 +20,7 @@ namespace Generator
             {
                 File.Create(FullNewPath);
             }
-            List<string> lines = new List<string>();
+            var lines = new List<string>();
             lines.Add("define " + arrayname + " = [] \nlabel generate_" + arrayname + ":");
             foreach (var i in values)
             {
