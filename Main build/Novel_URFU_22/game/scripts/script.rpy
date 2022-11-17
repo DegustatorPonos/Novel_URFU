@@ -1,5 +1,6 @@
 ﻿#В этом скрипте будет что-то типа __init__
 
+define NSFWfilter = 0
 define politeness = 5
 
 define audio.bassyBGM = "audio/music/BGbass.mp3"
@@ -27,12 +28,16 @@ image bg_toilet_bloody = "ToiletPlaceholder.jpg" #PH
 image blink = "Blink.png"
 # Технический лейбл, перетекает в act1part1
 label start:
-
     call generate_GrumblingArray
     scene bg_bbg
-    $a = len(GrumblingArray)
-    mainChar "[a]"
+    
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
+    "В процессе игры могут присутствовать сцены насилия и жестокости. Вы готовы их видеть?"
+    menu:
+        "Да":
+            $NSFWfilter = 0
+        "Нет":
+            $NSFWfilter = 1
     if len(NameSpace) < 1:
         $NameSpace = DefaultName
     
@@ -42,7 +47,3 @@ init python:
     def GenerateGrumbling(ammount):
         for i in range(ammount):
             return i
-
-
-
-
