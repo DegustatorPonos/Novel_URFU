@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/scripts/script.rpy", line 32: expected statement.
-    mainChar GrumblingArray[0]
-                           ^
+File "game/scripts/script.rpy", line 67: invalid syntax
+        msg character "message"
+             ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov 14 23:48:03 2022
+Mon Nov 21 13:48:48 2022

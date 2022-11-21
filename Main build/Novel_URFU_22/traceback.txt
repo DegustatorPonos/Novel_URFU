@@ -1,37 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/script.rpy", line 3, in script
-    define NSFWfilter = false
-  File "game/scripts/script.rpy", line 3, in script
-    define NSFWfilter = false
-  File "game/scripts/script.rpy", line 3, in <module>
-    define NSFWfilter = false
-NameError: name 'false' is not defined
+  File "game/scripts/script.rpy", line 36, in script
+    $TestF("test")
+  File "game/scripts/script.rpy", line 36, in <module>
+    $TestF("test")
+  File "game/scripts/script.rpy", line 61, in TestF
+    ui.jump(act1part1)
+AttributeError: module 'renpy.ui' has no attribute 'jump'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/scripts/script.rpy", line 3, in script
-    define NSFWfilter = false
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/scripts/script.rpy", line 3, in script
-    define NSFWfilter = false
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 2441, in execute
-    self.set()
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 2455, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/scripts/script.rpy", line 3, in <module>
-    define NSFWfilter = false
-NameError: name 'false' is not defined
+  File "game/scripts/script.rpy", line 36, in script
+    $TestF("test")
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/scripts/script.rpy", line 36, in <module>
+    $TestF("test")
+  File "game/scripts/script.rpy", line 61, in TestF
+    ui.jump(act1part1)
+AttributeError: module 'renpy.ui' has no attribute 'jump'
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Tue Nov 15 21:15:13 2022
+Mon Nov 21 13:50:03 2022

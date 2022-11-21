@@ -17,6 +17,8 @@ define polly = Character("Полина", color = "#ab274f")
 image pollyIdle = "PollyIdle.png"
 image pollyAngry = "PollyAngryPlaceholder.png" #PH
 
+define EV = Character("Евгений Викторович", color = "#262672")
+
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
 image bg_bbg = "blackbackground.png"
@@ -31,6 +33,9 @@ label start:
     call generate_GrumblingArray
     scene bg_bbg
     
+    $TestF("test")
+    #$EVsay("Test", 5)
+
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
     "В процессе игры могут присутствовать сцены насилия и жестокости. Вы готовы их видеть?"
     menu:
@@ -43,7 +48,27 @@ label start:
     
     jump act1part1
 
+label EVSpeech(toSay = "Error"):
+    EV "[toSay]."
+
+#define EVSpeechl = _EVSpeech
+
 init python:
-    def GenerateGrumbling(ammount):
+    import random
+
+    
+    def TestF(content):
+        EV('Test')
+
+    def EVsay(content, ammount):
+        global EVSpeechl
+        #renpy.call(EVSpeechl(content)) 
+        #renpy.text start character
+        #msg character "message"
+        #text end
         for i in range(ammount):
-            return i
+            _EVSpeech(GrumblingArray[randrange(len(GrumblingArray))])
+
+
+
+
