@@ -137,10 +137,18 @@ label act1part1:
     "..."
     mainChar "Зараза…"
     "Вы открываете глаза"
-    scene bg_toilet_bloody 
-    with fade
-    "Из окна падает свет, освещая Вас, лежащего в луже собственной крови."
-    show MCBloody at right
+    if NSFWfilter == 1:
+        scene bg_toilet_bloody 
+        with fade
+        "Из окна падает свет, освещая Вас, лежащего в луже собственной крови."
+    else:
+        scene bg_toilet_clean 
+        with fade
+        "Из окна падает свет, освещая Вас, лежащего на полу."
+    if NSFWfilter == 1:
+        show MCBloody at right
+    else 
+        show MCSad at right
     mainChar "Ёёёё..."
     mainChar "(И чё меня потянуло вставать?)"
     mainChar "(Как я вообще не умер?)"
