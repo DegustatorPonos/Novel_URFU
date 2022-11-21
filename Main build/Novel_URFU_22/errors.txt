@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/script.rpy", line 67: invalid syntax
-        msg character "message"
-             ^
-    
+File "game/scripts/act 1/1-1.rpy", line 105: expected statement.
+    pollyAngry: 
+              ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov 21 13:48:48 2022
+Mon Nov 21 18:42:16 2022

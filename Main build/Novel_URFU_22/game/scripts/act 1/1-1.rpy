@@ -48,7 +48,8 @@ label act1part1:
     "Ты выходишь на кухню и видишь Полину, болтающую со своей подругой."
     scene bg_kitchen
     with dissolve
-    show pollyIdle at left
+    show pollyIdle at left:
+        xzoom -1.0
     polly "…ага, и не говори! Уже не знаешь, что ставить! Столько времени на эти фильтры уходит! Что говоришь?"
     "..."
     polly "Ну да, мой – программист, а что?"
@@ -92,7 +93,8 @@ label act1part1:
     "Ты следуешь за ней."
     scene bg_pollysroom
     with dissolve
-    show pollyAngry at right
+    show pollyAngry at right:
+    #    xzoom -1.0
     show MCSad at left
     mainChar "Поль, я понимаю, ты злишься, но…"
     polly "Злюсь? Да я в бешенстве! За кого я вообще вышла?!"
