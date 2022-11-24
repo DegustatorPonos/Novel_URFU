@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/act 1/1-1.rpy", line 105: expected statement.
-    pollyAngry: 
-              ^
+File "game/scripts/script.rpy", line 23: expected '=' not found.
+    define temp
+               ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov 21 18:42:16 2022
+Thu Nov 24 18:56:50 2022

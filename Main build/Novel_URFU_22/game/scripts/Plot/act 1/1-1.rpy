@@ -147,7 +147,7 @@ label act1part1:
         "Из окна падает свет, освещая Вас, лежащего на полу."
     if NSFWfilter == 1:
         show MCBloody at right
-    else 
+    else:
         show MCSad at right
     mainChar "Ёёёё..."
     mainChar "(И чё меня потянуло вставать?)"

@@ -18,6 +18,8 @@ image pollyIdle = "Characters/PollyIdle.png"
 image pollyAngry = "Characters/PollyAngry.png" 
 
 define EV = Character("Евгений Викторович", color = "#262672")
+define EVatt = -10
+
 
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
@@ -52,3 +54,11 @@ init python:
         for i in range(ammount):
             EV(random.choice(GrumblingArray))
         EV(content)
+
+    def GetAttitude(charAtt):
+        if charAtt < -0.5:
+            return -1
+        elif -0.5 <= charAtt <= 0.5:
+            return 0
+        return 1
+
