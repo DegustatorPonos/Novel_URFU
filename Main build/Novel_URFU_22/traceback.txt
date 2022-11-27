@@ -1,36 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/script.rpy", line 37, in script
-    "[GetAttitude(EVatt)]"
-KeyError: 'GetAttitude(EVatt)'
+  File "game/scripts/script.rpy", line 40, in script
+    $testVar = GetAttitudeBinary(EVatt)
+  File "game/scripts/script.rpy", line 40, in <module>
+    $testVar = GetAttitudeBinary(EVatt)
+  File "game/scripts/script.rpy", line 70, in GetAttitudeBinary
+    if GetAttitude(chatatt) < 1:
+NameError: name 'chatatt' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 37, in script
-    "[GetAttitude(EVatt)]"
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
-    s = formatter.vformat(s, (), kwargs) # type: ignore
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
-    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
-KeyError: 'GetAttitude(EVatt)'
+  File "game/scripts/script.rpy", line 40, in script
+    $testVar = GetAttitudeBinary(EVatt)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/scripts/script.rpy", line 40, in <module>
+    $testVar = GetAttitudeBinary(EVatt)
+  File "game/scripts/script.rpy", line 70, in GetAttitudeBinary
+    if GetAttitude(chatatt) < 1:
+NameError: name 'chatatt' is not defined
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Thu Nov 24 18:55:09 2022
+Sat Nov 26 00:57:25 2022

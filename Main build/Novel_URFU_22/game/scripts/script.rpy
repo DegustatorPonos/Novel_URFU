@@ -18,8 +18,7 @@ image pollyIdle = "Characters/PollyIdle.png"
 image pollyAngry = "Characters/PollyAngry.png" 
 
 define EV = Character("Евгений Викторович", color = "#262672")
-define EVatt = -10
-
+define EVatt = -0.5
 
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
@@ -61,4 +60,10 @@ init python:
         elif -0.5 <= charAtt <= 0.5:
             return 0
         return 1
+
+    def GetAttitudeBinary(charAtt):
+        if GetAttitude(charAtt) < 1:
+            return -1
+        else:
+            return 1
 
