@@ -34,6 +34,8 @@
             this.ChooseButton = new System.Windows.Forms.Button();
             this.PathLabel = new System.Windows.Forms.Label();
             this.ContentContainer = new System.Windows.Forms.ListBox();
+            this.DimComoBox = new System.Windows.Forms.ComboBox();
+            this.SplitterTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ArrayTextBox
@@ -71,7 +73,7 @@
             this.PathLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PathLabel.Location = new System.Drawing.Point(258, 526);
             this.PathLabel.Name = "PathLabel";
-            this.PathLabel.Size = new System.Drawing.Size(587, 23);
+            this.PathLabel.Size = new System.Drawing.Size(378, 23);
             this.PathLabel.TabIndex = 7;
             this.PathLabel.Text = "Path";
             this.PathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,7 +85,28 @@
             this.ContentContainer.Name = "ContentContainer";
             this.ContentContainer.Size = new System.Drawing.Size(987, 498);
             this.ContentContainer.TabIndex = 8;
-            this.ContentContainer.SelectedIndexChanged += new System.EventHandler(this.ContentContainer_SelectedIndexChanged);
+            // 
+            // DimComoBox
+            // 
+            this.DimComoBox.FormattingEnabled = true;
+            this.DimComoBox.Items.AddRange(new object[] {
+            "1 dimention",
+            "2 dimentions"});
+            this.DimComoBox.Location = new System.Drawing.Point(642, 528);
+            this.DimComoBox.Name = "DimComoBox";
+            this.DimComoBox.Size = new System.Drawing.Size(121, 21);
+            this.DimComoBox.TabIndex = 9;
+            this.DimComoBox.Text = "Dimentions";
+            this.DimComoBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // SplitterTB
+            // 
+            this.SplitterTB.Enabled = false;
+            this.SplitterTB.Location = new System.Drawing.Point(769, 529);
+            this.SplitterTB.MaxLength = 1;
+            this.SplitterTB.Name = "SplitterTB";
+            this.SplitterTB.Size = new System.Drawing.Size(76, 20);
+            this.SplitterTB.TabIndex = 10;
             // 
             // Form1
             // 
@@ -92,12 +115,13 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1005, 555);
+            this.Controls.Add(this.SplitterTB);
+            this.Controls.Add(this.DimComoBox);
             this.Controls.Add(this.ContentContainer);
             this.Controls.Add(this.PathLabel);
             this.Controls.Add(this.ChooseButton);
             this.Controls.Add(this.ArrayTextBox);
             this.Controls.Add(this.GenerateButton);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Form1";
             this.Text = "RPY array compiler";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -113,6 +137,8 @@
         private System.Windows.Forms.Button ChooseButton;
         private System.Windows.Forms.Label PathLabel;
         private System.Windows.Forms.ListBox ContentContainer;
+        private System.Windows.Forms.ComboBox DimComoBox;
+        private System.Windows.Forms.TextBox SplitterTB;
     }
 }
 

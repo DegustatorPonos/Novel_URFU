@@ -1,11 +1,11 @@
-D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Debug\ArrayRPYCompiler_forms.exe.config
-D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Debug\ArrayRPYCompiler_forms.exe
-D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Debug\ArrayRPYCompiler_forms.pdb
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.csproj.AssemblyReference.cache
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.csproj.SuggestedBindingRedirects.cache
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.Form1.resources
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.Properties.Resources.resources
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.csproj.GenerateResource.cache
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.csproj.CoreCompileInputs.cache
-D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.exe
-D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\ArrayRPYCompiler_forms.pdb
+D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Debug\RPY array compiler.exe.config
+D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Debug\RPY array compiler.exe
+D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Debug\RPY array compiler.pdb
+D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\RPY array compiler.exe
+D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Debug\RPY array compiler.pdb

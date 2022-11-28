@@ -8,3 +8,4 @@ D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Release\RPY array co
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\bin\Release\RPY array compiler.pdb
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Release\RPY array compiler.exe
 D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Release\RPY array compiler.pdb
+D:\Git\Novel_URFU\ArrayGenerator\ArrayRPYCompiler_forms\obj\Release\ArrayRPYCompiler_forms.csproj.AssemblyReference.cache

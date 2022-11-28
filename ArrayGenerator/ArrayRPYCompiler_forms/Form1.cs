@@ -8,7 +8,7 @@ namespace ArrayRPYCompiler_forms
 {
     public partial class Form1 : Form
     {
-        bool PathSet = false;
+        bool PathSet = false, dimSet = false;
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +33,19 @@ namespace ArrayRPYCompiler_forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(PathSet) GeneratePythonArray(GetFilePath(), ArrayTextBox.Text, openFileDialog1.FileName);
+            if (PathSet & dimSet)
+            {
+                ArrayTextBox.Text = ArrayTextBox.Text.Replace(" ", "_");
+                switch (DimComoBox.SelectedIndex)
+                {
+                    case 0:
+                        GeneratePythonArray(GetFilePath(), ArrayTextBox.Text, openFileDialog1.FileName);
+                        break;
+                    case 1:
+                        GenerateTwoDimPythonArray(GetFilePath(), ArrayTextBox.Text, openFileDialog1.FileName);
+                        break;
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -63,6 +75,27 @@ namespace ArrayRPYCompiler_forms
             File.WriteAllLines(FullNewPath, lines.ToArray());
         }
 
+
+        void GenerateTwoDimPythonArray(string path, string arrayname, string originPath)
+        {
+            string FullNewPath = (path + arrayname + ".rpy");
+            var values = File.ReadAllLines(originPath);
+            var lines = new List<string>();
+            lines.Add("define " + arrayname + " = [] \nlabel generate_" + arrayname + ":");
+            foreach (var i in values)
+            {
+                var parts = i.Split(SplitterTB.Text[0]);
+                try
+                {
+                    lines.Add("    $" + arrayname + ".append(['" + parts[0] + "', '" + parts[1] + "'])");
+                }
+                catch
+                {
+                    continue;
+                }
+            }
+            File.WriteAllLines(FullNewPath, lines.ToArray());
+        }
         string GetFilePath()
         {
             var partArray = openFileDialog1.FileName.Split('\\');
@@ -75,9 +108,15 @@ namespace ArrayRPYCompiler_forms
             return builder.ToString();
         }
 
-        private void ContentContainer_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            dimSet = true;
+            if (DimComoBox.SelectedItem == DimComoBox.Items[1])
+            {
+                SplitterTB.Enabled = true;
+            }
+            else SplitterTB.Enabled = false;
         }
     }
 }
