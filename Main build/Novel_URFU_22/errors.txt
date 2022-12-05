@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/script.rpy", line 23: expected '=' not found.
-    define temp
-               ^
+File "game/scripts/script.rpy", line 54: expected statement.
+    AttUpdate(Gennadiy, 1)
+                          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Nov 24 18:56:50 2022
+Mon Dec  5 13:14:42 2022

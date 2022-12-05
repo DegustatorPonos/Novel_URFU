@@ -13,12 +13,28 @@ image MCSad = "MainCharSadPlaceholder.png" #PH
 image MCAngry = "MainCharAngryPlaceholder.png" #PH
 image MCBloody = "MainCharSadBloodyPlaceholder.png" #PH
 
-define polly = Character("Полина", color = "#ab274f")
-image pollyIdle = "Characters/PollyIdle.png"
-image pollyAngry = "Characters/PollyAngry.png" 
+#Объявление персонажей
 
-define EV = Character("Евгений Викторович", color = "#262672")
-define EVatt = -0.5
+define polly = Character("Полина", color = "#ab274f")
+image pollyIdle = "PollyIdle.png"
+image pollyAngry = "PollyAngryPlaceholder.png" #PH
+
+define EV = Character("Евгений Викторович", color = "#00ff9d")
+define EVatt = 0
+
+define Alex = Character("Александр", color = "#23019e")
+define AlexAtt = 0
+
+define Semen = Character("Семён", color = "#ff9900")
+define SAtt = 0
+
+define Galina = Character("Галина", color = "#81008d")
+define GalAtt = 0
+
+define Gennadiy = Character("Геннадий", color = "#ff0000")
+define GenAtt = 0
+
+define AttitudeVar = {'common':politeness, 'EV':EVatt, 'Alex':AlexAtt, 'Semen':SAtt, 'Galina':GalAtt, 'Gennadiy':GenAtt}
 
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
@@ -34,6 +50,7 @@ label start:
     call generate_GrumblingArray
     scene bg_bbg
 
+
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
     "В процессе игры могут присутствовать сцены насилия и жестокости. Вы готовы их видеть?"
     menu:
@@ -46,24 +63,22 @@ label start:
     
     jump act1part1
 
+
+
 init python:
     import random
 
-    def EVsay(content, ammount):
+    def SayWGrumbling(content, ammount):
         for i in range(ammount):
-            EV(random.choice(GrumblingArray))
-        EV(content)
+            _EVSpeech(GrumblingArray[randrange(len(GrumblingArray))])
+        _EVSpeech(content)
 
-    def GetAttitude(charAtt):
-        if charAtt < -0.5:
-            return -1
-        elif -0.5 <= charAtt <= 0.5:
-            return 0
-        return 1
+    def AttUpdate(character, ammount):
+        AttitudeVar['common'] += ammount
+        AttitudeVar[character] += ammount
+        
 
-    def GetAttitudeBinary(charAtt):
-        if GetAttitude(charAtt) < 1:
-            return -1
-        else:
-            return 1
+
+
+
 
