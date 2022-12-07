@@ -1,32 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/script.rpy", line 54, in script
-    $AttUpdate('Gennadiy', 1)
-  File "game/scripts/script.rpy", line 54, in <module>
-    $AttUpdate('Gennadiy', 1)
-  File "game/scripts/script.rpy", line 85, in AttUpdate
-    Gennadiy(AttitudeVar[character])
-Exception: Character expects its what argument to be a string, got 1.
+  File "game/scripts/script.rpy", line 71, in script call
+    call tempLabel #act1part1
+  File "game/scripts/minigames/math.rpy", line 20, in script
+    $MathMG()
+  File "game/scripts/minigames/math.rpy", line 20, in <module>
+    $MathMG()
+  File "game/scripts/minigames/math.rpy", line 11, in MathMG
+    timerTask = asyncio.create_task(timer(10, isDone))
+RuntimeError: no running event loop
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 54, in script
-    $AttUpdate('Gennadiy', 1)
+  File "game/scripts/script.rpy", line 71, in script call
+    call tempLabel #act1part1
+  File "game/scripts/minigames/math.rpy", line 20, in script
+    $MathMG()
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/scripts/script.rpy", line 54, in <module>
-    $AttUpdate('Gennadiy', 1)
-  File "game/scripts/script.rpy", line 85, in AttUpdate
-    Gennadiy(AttitudeVar[character])
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 1187, in __call__
-    raise Exception("Character expects its what argument to be a string, got %r." % (what,))
-Exception: Character expects its what argument to be a string, got 1.
+  File "game/scripts/minigames/math.rpy", line 20, in <module>
+    $MathMG()
+  File "game/scripts/minigames/math.rpy", line 11, in MathMG
+    timerTask = asyncio.create_task(timer(10, isDone))
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/asyncio/tasks.py", line 360, in create_task
+RuntimeError: no running event loop
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Mon Dec  5 13:16:36 2022
+Wed Dec  7 22:59:27 2022

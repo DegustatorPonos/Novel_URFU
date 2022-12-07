@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/scripts/script.rpy", line 54: expected statement.
-    AttUpdate(Gennadiy, 1)
-                          ^
+File "game/scripts/minigames/math.rpy", line 11: 'await' outside async function
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Dec  5 13:14:42 2022
+Wed Dec  7 22:50:44 2022

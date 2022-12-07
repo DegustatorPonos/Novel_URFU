@@ -1,4 +1,4 @@
-label act1part1:
+label act1part1():
     scene bg_bbg
     play music bassyBGM loop
     unknown "[NameSpace], вставай!"
