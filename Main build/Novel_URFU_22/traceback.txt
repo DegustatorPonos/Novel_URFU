@@ -1,35 +1,90 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/script.rpy", line 71, in script call
-    call tempLabel #act1part1
-  File "game/scripts/minigames/math.rpy", line 20, in script
+  File "game/scripts/script.rpy", line 80, in script call
+    call tempLabel #For debugging
+  File "game/scripts/minigames/math.rpy", line 27, in script
     $MathMG()
-  File "game/scripts/minigames/math.rpy", line 20, in <module>
+  File "game/scripts/minigames/math.rpy", line 27, in <module>
     $MathMG()
-  File "game/scripts/minigames/math.rpy", line 11, in MathMG
-    timerTask = asyncio.create_task(timer(10, isDone))
-RuntimeError: no running event loop
+  File "game/scripts/minigames/math.rpy", line 21, in MathMG
+    if renpy.input("[actual_question[0]]").strip() == actual_question[1]:
+  File "game/scripts/screens.rpy", line 175, in execute
+    screen input(prompt):
+  File "game/scripts/screens.rpy", line 175, in execute
+    screen input(prompt):
+  File "game/scripts/screens.rpy", line 178, in execute
+    window:
+  File "game/scripts/screens.rpy", line 180, in execute
+    vbox:
+  File "game/scripts/screens.rpy", line 186, in execute
+    text prompt style "input_prompt"
+NameError: Name 'actual_question' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 71, in script call
-    call tempLabel #act1part1
-  File "game/scripts/minigames/math.rpy", line 20, in script
+  File "game/scripts/script.rpy", line 80, in script call
+    call tempLabel #For debugging
+  File "game/scripts/minigames/math.rpy", line 27, in script
     $MathMG()
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/scripts/minigames/math.rpy", line 20, in <module>
+  File "game/scripts/minigames/math.rpy", line 27, in <module>
     $MathMG()
-  File "game/scripts/minigames/math.rpy", line 11, in MathMG
-    timerTask = asyncio.create_task(timer(10, isDone))
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/asyncio/tasks.py", line 360, in create_task
-RuntimeError: no running event loop
+  File "game/scripts/minigames/math.rpy", line 21, in MathMG
+    if renpy.input("[actual_question[0]]").strip() == actual_question[1]:
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 885, in input
+    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
+    callback(self)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
+    self.update()
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/scripts/screens.rpy", line 175, in execute
+    screen input(prompt):
+  File "game/scripts/screens.rpy", line 175, in execute
+    screen input(prompt):
+  File "game/scripts/screens.rpy", line 178, in execute
+    window:
+  File "game/scripts/screens.rpy", line 180, in execute
+    vbox:
+  File "game/scripts/screens.rpy", line 186, in execute
+    text prompt style "input_prompt"
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\text\text.py", line 1594, in __init__
+    self.set_text(text, scope, substitute)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\text\text.py", line 1712, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 236, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'actual_question' is not defined.
 
-Windows-10-10.0.19045 AMD64
+Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Wed Dec  7 22:59:27 2022
+Sat Dec 17 20:09:31 2022

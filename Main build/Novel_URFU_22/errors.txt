@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/minigames/math.rpy", line 11: 'await' outside async function
+File "game/scripts/minigames/math.rpy", line 15: invalid syntax
+    def MathMG()
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Dec  7 22:50:44 2022
+Sat Dec 17 20:07:30 2022

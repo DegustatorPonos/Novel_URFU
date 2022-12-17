@@ -3,6 +3,9 @@ define boolBreak = False
 
 define NSFWfilter = 0
 define politeness = 5
+define calledTasks = 0 #All tasks player faced
+define CompletedTasks = 0 #All tasks player has done correctly
+
 
 define audio.bassyBGM = "audio/music/BGbass.mp3"
 
@@ -36,6 +39,7 @@ define Gennadiy = Character("Геннадий", color = "#ff0000")
 define GenAtt = 0
 
 define AttitudeVar = {'common':politeness, 'EV':EVatt, 'Alex':AlexAtt, 'Semen':SAtt, 'Galina':GalAtt, 'Gennadiy':GenAtt}
+define tasksPointer = {'undone':calledTasks, 'done':CompletedTasks}
 
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
@@ -48,14 +52,11 @@ image bg_toilet_bloody = "ToiletPlaceholder.jpg" #PH
 image blink = "Blink.png"
 
 
-#define temp = act1part1
-
 # Технический лейбл, перетекает в act1part1
 label start:
     call generate_GrumblingArray
+    call generate_Math_equations
     scene bg_bbg
-
-    
 
 
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
@@ -68,14 +69,8 @@ label start:
     if len(NameSpace) < 1:
         $NameSpace = DefaultName
 
-    call tempLabel #act1part1
-    
-
     jump act1part1
 
-
-
-#define i = type(renpy.get_all_labels())
 
 init python:
     import random, this
@@ -84,23 +79,13 @@ init python:
 
     def SayWGrumbling(content, ammount):
         for i in range(ammount):
-            _EVSpeech(GrumblingArray[randrange(len(GrumblingArray))])
-        _EVSpeech(content)
+            EV(GrumblingArray[renpy.random.randint(0, len(GrumblingArray) - 1)])
+        EV(content)
 
     def AttUpdate(character, ammount):
         AttitudeVar['common'] += ammount
         AttitudeVar[character] += ammount
 
-    def temp():
-        #for i in renpy.get_all_labels()
-        
-        Gennadiy("[i]")
-
-#screen ask_are_you_sure:
-#    fixed:
-#      text "Are you sure?" xalign 0.5 yalign 0.3
-#      textbutton "Yes" xalign 0.33 yalign 0.5 action Return(True)
-#      textbutton "No" xalign 0.66 yalign 0.5 action Return(False)
 
         
 
