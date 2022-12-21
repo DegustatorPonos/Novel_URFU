@@ -171,5 +171,6 @@ label act1part1():
     mainChar "У МЕНЯ БУДЕТ БОЛЬШЕ ДЕНЕГ, ЧЕМ У ЭТОГО УБЛЮДКА МАКСА!"
     "Вы слышите удары в отопительный стояк."
     scene bg_bbg with dissolve
+    stop music
     jump act1part2
     return
