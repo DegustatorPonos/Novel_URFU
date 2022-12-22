@@ -12,15 +12,11 @@ init python:
         statusBool = True
 
 
-    def MathMG():
+    def InputMG(arrayToParse):
         deadlineTime = (datetime.datetime.now() + datetime.timedelta(seconds=10)).time()#datetime.timedelta(minutes=2, seconds=30)).time()
         while datetime.datetime.now().time() < deadlineTime:
             tasksPointer['undone'] += 1
-            actual_question = renpy.random.choice(Math_equations)
+            actual_question = renpy.random.choice(arrayToParse)
             if renpy.input(actual_question[0]).strip() == actual_question[1]:
                 tasksPointer['done'] += 1
         
-        
-
-label tempLabel:
-    $MathMG()
