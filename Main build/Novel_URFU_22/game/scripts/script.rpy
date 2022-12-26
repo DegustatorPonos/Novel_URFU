@@ -20,8 +20,8 @@ image MCBloody = "MainCharSadBloodyPlaceholder.png" #PH
 #Объявление персонажей
 
 define polly = Character("Полина", color = "#ab274f")
-image pollyIdle = "PollyIdle.png"
-image pollyAngry = "PollyAngryPlaceholder.png" #PH
+image pollyIdle = "Characters/Polly/PollyIdle.png"
+image pollyAngry = "Characters/Polly/PollyAngry.png" #PH
 
 define EV = Character("Евгений Викторович", color = "#00ff9d")
 define EVatt = 0
