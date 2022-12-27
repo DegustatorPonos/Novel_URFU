@@ -11,12 +11,28 @@ init python:
         await asyncio.sleep(secs)
         statusBool = True
 
+    def TypingMG(arrayToParse):
+        globalDeadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+        while datetime.datetime.now().time() < deadlineTime:
+            local deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+            
+
 
     def InputMG(arrayToParse):
-        deadlineTime = (datetime.datetime.now() + datetime.timedelta(seconds=10)).time()#datetime.timedelta(minutes=2, seconds=30)).time()
+        deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
         while datetime.datetime.now().time() < deadlineTime:
             tasksPointer['undone'] += 1
             actual_question = renpy.random.choice(arrayToParse)
             if renpy.input(actual_question[0]).strip() == actual_question[1]:
                 tasksPointer['done'] += 1
         
+label DoMathMG:
+    "Вы садитесь за рабоче место."
+    "Вам предстоит провести небольшой математический анализ."
+    $InputMG(Math_equations)
+
+label DoBinarMG:
+    "Вы садитесь за рабоче место."
+    "Вам предстоит разобраться с системами исчисления в файлах."
+    $InputMG(Different_systems)
+
