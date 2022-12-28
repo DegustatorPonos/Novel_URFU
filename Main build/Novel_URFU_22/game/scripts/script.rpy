@@ -2,7 +2,7 @@
 define boolBreak = False
 
 define NSFWfilter = 0
-define politeness = 5
+#define politeness = 5
 define calledTasks = 0 #All tasks player faced
 define CompletedTasks = 0 #All tasks player has done correctly
 
@@ -11,45 +11,83 @@ define audio.bassyBGM = "audio/music/BGbass.mp3"
 
 define DefaultName = "Николай"
 define NameSpace = ""
-define mainChar = Character("[NameSpace]", color = "#402b2b")
-image MCIdle = "MainCharIdlePlaceholder.png" #PH
-image MCSad = "MainCharSadPlaceholder.png" #PH
-image MCAngry = "MainCharAngryPlaceholder.png" #PH
-image MCBloody = "MainCharSadBloodyPlaceholder.png" #PH
 
 #Объявление персонажей
 
+define mainChar = Character("[NameSpace]", color = "#402b2b")
+image MCIdle = "Characters/MC/MCIdle.png" #PH
+image MCSad = "Characters/MC/MCLaughter.png" #PH
+image MCAngry = "Characters/MC/MCAngry.png" #PH
+image MCScream = "Characters/MC/MCScream.png" #PH
+#image MCBloody = "Characters/MC/MCIdle.png" #PH
+
 define polly = Character("Полина", color = "#ab274f")
 image pollyIdle = "Characters/Polly/PollyIdle.png"
-image pollyAngry = "Characters/Polly/PollyAngry.png" #PH
+image pollyAngry = "Characters/Polly/PollyAngry.png" 
 
 define EV = Character("Евгений Викторович", color = "#00ff9d")
 define EVatt = 0
+image EVcalm = "Characters/Evgaeniy/EVIdle.png"
+image EVAngry = "Characters/Evgaeniy/EVAngry.png"
+image EVSad = "Characters/Evgaeniy/EVSad.png"
+image EVScream = "Characters/Evgaeniy/EVScream.png"
+image EVSmile = "Characters/Evgaeniy/EVSmile.png"
 
 define Alex = Character("Александр", color = "#23019e")
 define AlexAtt = 0
+image AlexIdle = "Characters/Alex/AlexIdle.png"
+image AlexSmile = "Characters/Alex/AlexSmiling.png"
+image AlexSad = "Characters/Alex/AlexSad.png"
+image AlexScream = "Characters/Alex/AlexScream.png"
 
 define Semen = Character("Семён", color = "#ff9900")
 define SAtt = 0
+image SemIdle = "Characters/Semen/SemIdle.png"
+image SemSmile = "Characters/Semen/SemHappy.png"
+image SemSad = "Characters/Semen/SemSad.png"
+image SemScream = "Characters/Semen/SemAngry.png"
 
 define Galina = Character("Галина", color = "#81008d")
-define GalAtt = 0
+define GalAtt = 
+image GalIdle = "Characters/Galina/GalIdle.png"
+image GalSmile = "Characters/Galina/GalHappy.png"
+image GalSad = "Characters/Galina/GalAngry.png"
+image GalScream = "Characters/Galina/GalScream.png"
 
 define Gennadiy = Character("Геннадий", color = "#ff0000")
 define GenAtt = 0
+image GenIdle = "Characters/Gennadiy/GenDdle.png"
+image GenSmile = "Characters/Gennadiy/GenLaughter.png"
+image GenSad = "Characters/Gennadiy/GenAngry.png"
+image GenScream = "Characters/Gennadiy/GenScream.png"
+
+#Объявление задников
+
+image bg_bbg = "BGs/blackbackground.png"
+image blink = "BGs/Blink.png"
+
+image bg_bedroom = "BGs/spal`nya ready(defolt)(1).png"
+image bg_kitchen = "BGs/kitchen.png"
+image bg_pollysroom = "BGs/bedroom polini 1.png"
+image bg_toilet_clean = "BGs/bathroom1.png" 
+image bg_toilet_bloody = "BGs/bathroom(bloody).png" 
+
+image EntryBG = "BGs/Entry.jpg"
+image GalBG = "BGs/GalinaBG.jpg"
+image GenBG = "BGs/GenBG.jpg"
+image SemG = "BGs/Semen.jpg"
+image EVBG = "BGs/Evgeniy Borisovi4.jpg"
+image AlexBG = "BGs/Alexander Svincov(1).jpg"
+image MC_BG = "BGs/MCBG.jpg"
+image HallBG = "BGs/koridor.jpg"
+image ClubBG = "BGs/nightclub.jpg"
 
 define AttitudeVar = {'common':politeness, 'EV':EVatt, 'Alex':AlexAtt, 'Semen':SAtt, 'Galina':GalAtt, 'Gennadiy':GenAtt}
 define tasksPointer = {'undone':calledTasks, 'done':CompletedTasks}
 
 #Непривязанный к персонажам контент
 define unknown = Character("Голос", color="#c9c9c9")
-image bg_bbg = "blackbackground.png"
-image bg_bedroom = "spal`nya ready(defolt)(1).png"
-image bg_kitchen = "kitchen.png"
-image bg_pollysroom = "bedroom polini 1.png"
-image bg_toilet_clean = "ToiletPlaceholder.jpg" #PH
-image bg_toilet_bloody = "ToiletPlaceholder.jpg" #PH
-image blink = "Blink.png"
+
 
 
 # Технический лейбл, перетекает в act1part1
@@ -82,9 +120,9 @@ init python:
             EV(GrumblingArray[renpy.random.randint(0, len(GrumblingArray) - 1)])
         EV(content)
 
-    def AttUpdate(character, ammount):
-        AttitudeVar['common'] += ammount
-        AttitudeVar[character] += ammount
+    #def AttUpdate(character, ammount):
+    #    AttitudeVar['common'] += ammount
+    #    AttitudeVar[character] += ammount
 
 
         

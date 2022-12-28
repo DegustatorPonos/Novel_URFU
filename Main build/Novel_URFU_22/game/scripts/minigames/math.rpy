@@ -11,10 +11,10 @@ init python:
         await asyncio.sleep(secs)
         statusBool = True
 
-    def TypingMG(arrayToParse):
-        globalDeadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
-        while datetime.datetime.now().time() < deadlineTime:
-            local deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+    #def TypingMG(arrayToParse):
+    #    globalDeadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+    #    while datetime.datetime.now().time() < deadlineTime:
+    #        deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
             
 
 

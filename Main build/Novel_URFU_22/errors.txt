@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/scripts/minigames/math.rpy", line 15: invalid syntax
-    def MathMG()
+File "game/scripts/minigames/math.rpy", line 17: invalid syntax
+            local deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+                   ^
     
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Dec 17 20:07:30 2022
+Wed Dec 28 12:05:03 2022
