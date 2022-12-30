@@ -116,7 +116,6 @@ label Gal_3_1:
     call gal_3_2
     return
 
-
 label gal_3_2:
     mainChar "Знаете, если все время искать оправдания, то вы так ничего не добьетесь."
     if GalChoices > 1:
@@ -165,5 +164,3 @@ label gal_3_ending_1:
     scene bg_bbg
     $GalAtt -= 2
     return  
-
-

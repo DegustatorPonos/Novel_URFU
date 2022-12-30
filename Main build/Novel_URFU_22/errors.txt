@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 89: expected ':' not found.
-    "У родни попросить?" + GalChoice[0]:
-                         ^
+File "game/scripts/Plot/act 2/Galina/2_gal_3.rpy", line 83: invalid syntax
+    GalAtt = -1 /* GalAtt
+                  ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Dec 30 01:34:29 2022
+Fri Dec 30 16:10:31 2022

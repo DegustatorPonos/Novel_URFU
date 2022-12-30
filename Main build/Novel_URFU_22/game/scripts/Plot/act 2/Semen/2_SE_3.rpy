@@ -55,8 +55,8 @@ label Semen_meet4_good():
     Semen "Даже не знаю, я ведь просто не вытерплю их, понимаешь?"
     menu:
         "Музыку слушаешь?":
-           mainChar "Музыку слушаешь?" 
-           jump Semen_meet4_mus
+            mainChar "Музыку слушаешь?" 
+            jump Semen_meet4_mus
 
         "Книжки читаешь?":
             mainChar "Книжки читаешь?"
@@ -114,9 +114,11 @@ label Semen_meet4_bad():
     mainChar "Ну ладно, давай до завтра."
     Semen "..."
     $SAtt -= 3
-    jump Semen_meet4_end
-    return
+    jump Semen_meet4_end #???
+    return #???
 
-label Semen_meet4_end():
-    
-    return
+label Semen_meet4_end(): #???
+    #???
+    #зачем?
+    return #???
+
