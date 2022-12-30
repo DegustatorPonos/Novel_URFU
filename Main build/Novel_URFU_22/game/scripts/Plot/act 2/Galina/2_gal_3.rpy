@@ -1,4 +1,4 @@
-define GalBlueRoot = False
+define GalBlueRoot = True
 
 label act2_Gal_meet4:
     if len(GalChoice[0]) < 2:
@@ -114,6 +114,7 @@ label act2_Gal_meet4:
     Galina "Так мы больше не созванивались."
     menu:
         "Предложить позвонить самой":
+            $GalBlueRoot = False
             mainChar "Вы не пытались сами им позвонить?"
             Galina "Нет, я...{w} Я боюсь.{w} Они, может, вообще мой номер заблокировали."
             mainChar "Не верю я этому, как бы вы не ругались раньше - время не стоит на месте.{w} Я уверен они не будут против вновь с вами говорить." #БЯЛТЬ ЭТО ЖЕ РЕАЛЬНО HOME ALONE

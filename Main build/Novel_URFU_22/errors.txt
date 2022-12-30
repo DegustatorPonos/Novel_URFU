@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/Plot/act 2/Galina/2_gal_3.rpy", line 83: invalid syntax
-    GalAtt = -1 /* GalAtt
-                  ^
-    
+File "game/scripts/Plot/act 3/3_Gal.rpy", line 16: expected statement.
+    schow bg_bbg 
+                 ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Dec 30 16:10:31 2022
+Fri Dec 30 22:46:10 2022

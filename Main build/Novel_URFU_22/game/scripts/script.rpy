@@ -2,7 +2,7 @@
 define boolBreak = False
 
 define NSFWfilter = 0
-#define politeness = 5
+define politeness = 5 #Unused in the release version ut the game crashes if we delete it =D
 define calledTasks = 0 #All tasks player faced
 define CompletedTasks = 0 #All tasks player has done correctly
 
@@ -15,11 +15,11 @@ define NameSpace = ""
 #Объявление персонажей
 
 define mainChar = Character("[NameSpace]", color = "#402b2b")
-image MCIdle = "Characters/MC/MCIdle.png" #PH
-image MCSad = "Characters/MC/MCLaughter.png" #PH
-image MCAngry = "Characters/MC/MCAngry.png" #PH
-image MCScream = "Characters/MC/MCScream.png" #PH
-#image MCBloody = "Characters/MC/MCIdle.png" #PH
+image MCIdle = "Characters/MC/MCIdle.png" 
+image MCSad = "Characters/MC/MCLaughter.png" 
+image MCAngry = "Characters/MC/MCAngry.png" 
+image MCScream = "Characters/MC/MCScream.png" 
+#image MCBloody = "Characters/MC/MCIdle.png" 
 
 define polly = Character("Полина", color = "#ab274f")
 image pollyIdle = "Characters/Polly/PollyIdle.png"
@@ -27,11 +27,11 @@ image pollyAngry = "Characters/Polly/PollyAngry.png"
 
 define EV = Character("Евгений Викторович", color = "#00ff9d")
 define EVatt = 0
-image EVcalm = "Characters/Evgaeniy/EVIdle.png"
-image EVAngry = "Characters/Evgaeniy/EVAngry.png"
-image EVSad = "Characters/Evgaeniy/EVSad.png"
-image EVScream = "Characters/Evgaeniy/EVScream.png"
-image EVSmile = "Characters/Evgaeniy/EVSmile.png"
+image EVcalm = "Characters/Evgeniy/EVIdle.png"
+image EVAngry = "Characters/Evgeniy/EVAngry.png"
+image EVSad = "Characters/Evgeniy/EVSad.png"
+image EVScream = "Characters/Evgeniy/EVScream.png"
+image EVSmile = "Characters/Evgeniy/EVSmile.png"
 
 define Alex = Character("Александр", color = "#23019e")
 define AlexAtt = 0
@@ -48,7 +48,7 @@ image SemSad = "Characters/Semen/SemSad.png"
 image SemScream = "Characters/Semen/SemAngry.png"
 
 define Galina = Character("Галина", color = "#81008d")
-define GalAtt = 
+define GalAtt = 0
 image GalIdle = "Characters/Galina/GalIdle.png"
 image GalSmile = "Characters/Galina/GalHappy.png"
 image GalSad = "Characters/Galina/GalAngry.png"
@@ -95,7 +95,6 @@ label start:
     call generate_GrumblingArray
     call generate_Math_equations
     scene bg_bbg
-
 
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
     "В процессе игры могут присутствовать сцены насилия и жестокости. Вы готовы их видеть?"
