@@ -11,10 +11,18 @@ init python:
         await asyncio.sleep(secs)
         statusBool = True
 
-    #def TypingMG(arrayToParse):
-    #    globalDeadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
-    #    while datetime.datetime.now().time() < deadlineTime:
-    #        deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+    def TypingMG(arrayToParse):
+        globalDeadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
+        while datetime.datetime.now().time() < globalDeadlineTime:
+            tasksPointer['undone'] += 1
+            actual_question = renpy.random.choice(arrayToParse)
+            deadlineTime = (datetime.datetime.now() + datetime.timedelta(seconds = len[actual_question]/2)).time()
+            pAnswer = " "
+            while pAnswer != actual_question:
+                pAnswer = renpy.input().strip()
+            if datetime.datetime.now() < deadlineTime:
+                tasksPointer['done'] += 1
+        
             
 
 

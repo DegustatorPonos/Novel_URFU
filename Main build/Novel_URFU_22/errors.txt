@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/minigames/math.rpy", line 17: invalid syntax
-            local deadlineTime = (datetime.datetime.now() + datetime.timedelta(minutes=2)).time()
-                   ^
-    
+File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 89: expected ':' not found.
+    "У родни попросить?" + GalChoice[0]:
+                         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Dec 28 12:05:03 2022
+Fri Dec 30 01:34:29 2022

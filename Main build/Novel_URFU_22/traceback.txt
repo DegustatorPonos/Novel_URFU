@@ -1,90 +1,88 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/scripts/script.rpy", line 80, in script call
-    call tempLabel #For debugging
-  File "game/scripts/minigames/math.rpy", line 27, in script
-    $MathMG()
-  File "game/scripts/minigames/math.rpy", line 27, in <module>
-    $MathMG()
-  File "game/scripts/minigames/math.rpy", line 21, in MathMG
-    if renpy.input("[actual_question[0]]").strip() == actual_question[1]:
-  File "game/scripts/screens.rpy", line 175, in execute
-    screen input(prompt):
-  File "game/scripts/screens.rpy", line 175, in execute
-    screen input(prompt):
-  File "game/scripts/screens.rpy", line 178, in execute
-    window:
-  File "game/scripts/screens.rpy", line 180, in execute
-    vbox:
-  File "game/scripts/screens.rpy", line 186, in execute
-    text prompt style "input_prompt"
-NameError: Name 'actual_question' is not defined.
+While loading <renpy.display.im.Image object ('Characters/Gennadiy/GenDdle.png') at 0x0000000004db4880>:
+  File "game/scripts/script.rpy", line 103, in script call
+    call act2_Gal_meet3
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 49, in script call
+    call Gal_3_1
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 99, in script call
+    call gal_3_2
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 145, in script call
+    call gal_3_ending_1
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 154, in script
+    with fade
+OSError: Couldn't find file 'Characters/Gennadiy/GenDdle.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 80, in script call
-    call tempLabel #For debugging
-  File "game/scripts/minigames/math.rpy", line 27, in script
-    $MathMG()
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/scripts/minigames/math.rpy", line 27, in <module>
-    $MathMG()
-  File "game/scripts/minigames/math.rpy", line 21, in MathMG
-    if renpy.input("[actual_question[0]]").strip() == actual_question[1]:
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 885, in input
-    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "game/scripts/script.rpy", line 103, in script call
+    call act2_Gal_meet3
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 49, in script call
+    call Gal_3_1
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 99, in script call
+    call gal_3_2
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 145, in script call
+    call gal_3_ending_1
+  File "game/scripts/Plot/act 2/Galina/2_gal_2.rpy", line 154, in script
+    with fade
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1658, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 1657, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 2798, in do_with
+    return self.interact(trans_pause=True,
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/scripts/screens.rpy", line 175, in execute
-    screen input(prompt):
-  File "game/scripts/screens.rpy", line 175, in execute
-    screen input(prompt):
-  File "game/scripts/screens.rpy", line 178, in execute
-    window:
-  File "game/scripts/screens.rpy", line 180, in execute
-    vbox:
-  File "game/scripts/screens.rpy", line 186, in execute
-    text prompt style "input_prompt"
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\text\text.py", line 1594, in __init__
-    self.set_text(text, scope, substitute)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\text\text.py", line 1712, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
-    s = formatter.vformat(s, (), kwargs) # type: ignore
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
-    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\substitutions.py", line 236, in __getitem__
-    raise NameError("Name '{}' is not defined.".format(key))
-NameError: Name 'actual_question' is not defined.
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3912, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 2602, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\transition.py", line 186, in render
+    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\transition.py", line 378, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\image.py", line 506, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\image.py", line 309, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\im.py", line 627, in render
+    return cache.get(self, render=True)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\im.py", line 295, in get
+    surf = image.load()
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\im.py", line 720, in load
+    raise e
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\im.py", line 685, in load
+    filelike = renpy.loader.load(self.filename)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\loader.py", line 820, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'Characters/Gennadiy/GenDdle.png'.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Sat Dec 17 20:09:31 2022
+Fri Dec 30 01:36:21 2022
