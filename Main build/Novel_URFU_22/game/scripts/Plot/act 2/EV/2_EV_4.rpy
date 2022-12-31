@@ -2,7 +2,7 @@
     "Вы направляетесь к кабинету Евгения Викторовича"
     if haveDog:
         jump EV_meet5_Dog
-    if else EVatt < -10:
+    elif EVatt < -10:
         scene bg_office_director
         show EVIdle
         "Евгений Викторович сидит в пустом кабинете и просто пялит в одну точку"
