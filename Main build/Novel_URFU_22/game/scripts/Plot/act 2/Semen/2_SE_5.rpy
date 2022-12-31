@@ -1,5 +1,5 @@
 ﻿label act2_Semen_meet6():
-    if $SAtt > 0:
+    if SAtt > 0:
         jump Semen_meet6_good
     else:
         jump Semen_meet6_bad
@@ -18,7 +18,7 @@ label Semen_meet6_bad():
     Semen "Тупые неадекваты! Ну и катись оно все..."
     "Семен поспешил покинуть кабинет, на последок с грохотом закрыв дверь."
     show AlexIdle
-    if $AlexAtt > 0:
+    if AlexAtt > 0:
         Alex "Жаль конечно, но ему и вправду нужно было чуть остыть." 
     else:
         Alex "Слава богу! Наконец-то его отсюда выперли!"
