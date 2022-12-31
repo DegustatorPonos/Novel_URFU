@@ -5,11 +5,11 @@
     show EVIdle at right
     if EVhobby == 0: #ничего
         jump EV_meet4_long
-    if else EVhobby == 1: #цветы
+    elif EVhobby == 1: #цветы
         "В кабинете сидит Евгений Викторович."
         "На полках стоит множество растений"
         jump EV_meet4_short
-    if else EVhobby == 5: #рукоделие
+    elif EVhobby == 5: #рукоделие
         "В кабинете сидит Евгений Викторович."
         "На полках стоит множество поделок"
         jump EV_meet3_short
