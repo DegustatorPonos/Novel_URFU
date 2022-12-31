@@ -1,17 +1,75 @@
-Fri Dec 30 22:56:54 2022
+Sat Dec 31 03:34:52 2022
 Windows-10-10.0.19045
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.24s
-Early init took 0.01s
-Loader init took 0.21s
-Loading error handling took 0.14s
-Loading script took 1.17s
+Bootstrap to the start of init.init took 0.56s
+Early init took 0.02s
+Loader init took 0.44s
+Loading error handling took 0.18s
+Loading script took 1.54s
 Loading save slot metadata. took 0.10s
 Loading persistent took 0.00s
+
+File "game/scripts/Plot/act 2/Gennadiy/2_gen_2.rpy", line 74: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    Gennadiy "Дел больше нет, кроме как подслушивать?"
+    ^
+
+File "game/scripts/Plot/act 2/Gennadiy/2_gen_2.rpy", line 232: expected statement.
+    Давайте
+           ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 4.36s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) HD Graphics'
+Version: b'2.1.0 - Build 8.15.10.2900'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 105.93s
+Early init took 0.00s
+Loader init took 0.20s
+Loading error handling took 0.13s
+Loading script took 1.03s
+Loading save slot metadata. took 0.09s
+Loading persistent took 0.00s
+
+File "game/scripts/Plot/act 2/Gennadiy/2_gen_2.rpy", line 127: expected statement.
+    "Предложить помощь":
+                       ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 2.79s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) HD Graphics'
+Version: b'2.1.0 - Build 8.15.10.2900'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 135.40s
+Early init took 0.00s
+Loader init took 0.20s
+Loading error handling took 0.13s
+Loading script took 1.17s
+Loading save slot metadata. took 0.09s
+Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\qwawe\\Downloads\\renpy-8.0.3-sdk\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
- - Init at game/scripts/minigames/math.rpy:1 took 0.25102 s.
+ - Init at game/scripts/minigames/math.rpy:1 took 0.27695 s.
 The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
@@ -33,31 +91,31 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-Running init code took 0.52s
-Loading analysis data took 0.06s
+Running init code took 0.57s
+Loading analysis data took 0.07s
 Analyze and compile ATL took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\qwawe\\AppData\\Roaming/RenPy/backups\\Novel_URFU_22':
-Dump and make backups. took 0.32s
+Dump and make backups. took 0.33s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.07s
+Initial gc. took 0.09s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 2.58s
+Creating interface object took 2.40s
 Cleaning stores took 0.00s
-Init translation took 0.15s
+Init translation took 0.16s
 Build styles took 0.02s
 Load screen analysis took 0.00s
-Analyze screens took 0.06s
+Analyze screens took 0.04s
 Save screen analysis took 0.06s
-Prepare screens took 0.27s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.11s
-Running _start took 0.00s
+Prepare screens took 0.26s
+Save pyanalysis. took 0.06s
+Save bytecode. took 0.08s
+Running _start took 0.01s
 Performance test:
-Interface start took 0.36s
+Interface start took 0.17s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)

@@ -1,25 +1,33 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('Characters/Evgaeniy/EVSad.png') at 0x0000000005a2ecd0>:
-  File "game/scripts/script.rpy", line 103, in script
-    $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
-  File "game/scripts/script.rpy", line 103, in <module>
-    $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
-OSError: Couldn't find file 'Characters/Evgaeniy/EVSad.png'.
+While loading <renpy.display.im.Image object ('Characters/Gennadiy/GenDdle.png') at 0x0000000005ae44c0>:
+  File "game/scripts/script.rpy", line 100, in script call
+    call act2_Gen_meet2
+  File "game/scripts/Plot/act 2/Gennadiy/2_Gen_1.rpy", line 72, in script call
+    call Gen_2_quesions
+  File "game/scripts/Plot/act 2/Gennadiy/2_Gen_1.rpy", line 220, in script
+    Gennadiy "Ну, ты как хочешь, но я домой."
+OSError: Couldn't find file 'Characters/Gennadiy/GenDdle.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/script.rpy", line 103, in script
-    $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/scripts/script.rpy", line 103, in <module>
-    $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
-  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 885, in input
-    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "game/scripts/script.rpy", line 100, in script call
+    call act2_Gen_meet2
+  File "game/scripts/Plot/act 2/Gennadiy/2_Gen_1.rpy", line 72, in script call
+    call Gen_2_quesions
+  File "game/scripts/Plot/act 2/Gennadiy/2_Gen_1.rpy", line 220, in script
+    Gennadiy "Ну, ты как хочешь, но я домой."
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 927, in do_display
+    display_say(who,
+  File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\character.py", line 666, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
@@ -62,9 +70,9 @@ Full traceback:
     filelike = renpy.loader.load(self.filename)
   File "C:\Users\qwawe\Downloads\renpy-8.0.3-sdk\renpy-8.0.3-sdk\renpy\loader.py", line 820, in load
     raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'Characters/Evgaeniy/EVSad.png'.
+OSError: Couldn't find file 'Characters/Gennadiy/GenDdle.png'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Novel_URFU_22 1.0
-Fri Dec 30 22:56:03 2022
+Sat Dec 31 01:46:31 2022

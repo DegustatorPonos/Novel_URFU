@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/Plot/act 3/3_Gal.rpy", line 16: expected statement.
-    schow bg_bbg 
-                 ^
+File "game/scripts/Plot/act 2/Gennadiy/2_gen_2.rpy", line 127: expected statement.
+    "Предложить помощь":
+                       ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Dec 30 22:46:10 2022
+Sat Dec 31 03:36:39 2022

@@ -2,7 +2,7 @@
 define boolBreak = False
 
 define NSFWfilter = 0
-define politeness = 5 #Unused in the release version ut the game crashes if we delete it =D
+define politeness = 5 #Unused in the release version but the game crashes if we delete it =D
 define calledTasks = 0 #All tasks player faced
 define CompletedTasks = 0 #All tasks player has done correctly
 
@@ -56,7 +56,7 @@ image GalScream = "Characters/Galina/GalScream.png"
 
 define Gennadiy = Character("Геннадий", color = "#ff0000")
 define GenAtt = 0
-image GenIdle = "Characters/Gennadiy/GenDdle.png"
+image GenIdle = "Characters/Gennadiy/GenIdle.png"
 image GenSmile = "Characters/Gennadiy/GenLaughter.png"
 image GenSad = "Characters/Gennadiy/GenAngry.png"
 image GenScream = "Characters/Gennadiy/GenScream.png"
@@ -95,6 +95,9 @@ label start:
     call generate_GrumblingArray
     call generate_Math_equations
     scene bg_bbg
+
+    $GenAtt = -1.5
+    call act2_Gen_meet3
 
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
     "В процессе игры могут присутствовать сцены насилия и жестокости. Вы готовы их видеть?"
