@@ -1,8 +1,8 @@
 ﻿label act2_EV_meet5():
     "Вы направляетесь к кабинету Евгения Викторовича"
-    if $haveDog:
+    if haveDog:
         jump EV_meet5_Dog
-    if else $EVatt < -10:
+    if else EVatt < -10:
         scene bg_office_director
         show EVIdle
         "Евгений Викторович сидит в пустом кабинете и просто пялит в одну точку"
@@ -24,7 +24,7 @@ label EV_meet5_Dog():
     "Вы не застаете Евгения Викторовича в кабинете, вместо него вы встречаете Гейнадия Борисовича" 
     mainChar "Добрый день Евген... Генадий БорисовичЪ?"
     show GenIdle at right
-    if $GenAtt > 0:
+    if GenAtt > 0:
         Gennadiy "Добрый, добрый, тоже Евгения ищешь?"
     else:
         Gennadiy "Ага, добрый. Евгения Викторовича ищите?"
@@ -45,7 +45,7 @@ label EV_meet5_Dog():
 
         "И правда...":
             mainChar "И в самом деле, Евгений Викторович, столько времени тратить на собаку, в рабочее то время."
-            if $GenAtt > 0:
+            if GenAtt > 0:
                 Gennadiy "Вот именно. Ну ладно, не буду вам мешать, у меня обед."
                 hide GenIdle
                 $EVatt += 1
