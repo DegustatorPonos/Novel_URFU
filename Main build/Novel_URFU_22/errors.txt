@@ -2,9 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/scripts/Plot/act 2/Gennadiy/2_gen_2.rpy", line 127: expected statement.
-    "Предложить помощь":
-                       ^
+File "game/scripts/Plot/act 3/3_Gen.rpy", line 116: expected statement.
+(Perhaps you left out a " at the end of the first line.)
+    (ГГ) Это вот это Вы слушаете?"
+                                ^
+        Gennadiy " Периодически.{w} И да, на ты, помнишь?"
+        (ГГ) Простите..."
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Dec 31 03:36:39 2022
+Sat Dec 31 15:34:30 2022

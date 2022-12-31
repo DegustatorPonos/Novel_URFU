@@ -91,7 +91,7 @@ label Alex_meet3_good:
             Alex "Жаль."
             Alex "Что то хотел?"
             jump Alex_meet3_end
-    if scoreVerseAlex_1 = 1:
+    if scoreVerseAlex_1 == 1:
         n '''Ты мне нужна
         Я вновь один, лежу, скучаю,
         Тепло в душе не ощущаю,

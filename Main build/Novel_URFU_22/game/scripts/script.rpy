@@ -26,7 +26,7 @@ image pollyIdle = "Characters/Polly/PollyIdle.png"
 image pollyAngry = "Characters/Polly/PollyAngry.png" 
 
 define EV = Character("Евгений Викторович", color = "#00ff9d")
-define EVatt = 0
+define EVatt = 0.5
 image EVcalm = "Characters/Evgeniy/EVIdle.png"
 image EVAngry = "Characters/Evgeniy/EVAngry.png"
 image EVSad = "Characters/Evgeniy/EVSad.png"
@@ -34,28 +34,28 @@ image EVScream = "Characters/Evgeniy/EVScream.png"
 image EVSmile = "Characters/Evgeniy/EVSmile.png"
 
 define Alex = Character("Александр", color = "#23019e")
-define AlexAtt = 0
+define AlexAtt = 0.5
 image AlexIdle = "Characters/Alex/AlexIdle.png"
 image AlexSmile = "Characters/Alex/AlexSmiling.png"
 image AlexSad = "Characters/Alex/AlexSad.png"
 image AlexScream = "Characters/Alex/AlexScream.png"
 
 define Semen = Character("Семён", color = "#ff9900")
-define SAtt = 0
+define SAtt = 0.5
 image SemIdle = "Characters/Semen/SemIdle.png"
 image SemSmile = "Characters/Semen/SemHappy.png"
 image SemSad = "Characters/Semen/SemSad.png"
 image SemScream = "Characters/Semen/SemAngry.png"
 
 define Galina = Character("Галина", color = "#81008d")
-define GalAtt = 0
+define GalAtt = 0.5
 image GalIdle = "Characters/Galina/GalIdle.png"
 image GalSmile = "Characters/Galina/GalHappy.png"
 image GalSad = "Characters/Galina/GalAngry.png"
 image GalScream = "Characters/Galina/GalScream.png"
 
 define Gennadiy = Character("Геннадий", color = "#ff0000")
-define GenAtt = 0
+define GenAtt = 0.5
 image GenIdle = "Characters/Gennadiy/GenIdle.png"
 image GenSmile = "Characters/Gennadiy/GenLaughter.png"
 image GenSad = "Characters/Gennadiy/GenAngry.png"
@@ -96,8 +96,6 @@ label start:
     call generate_Math_equations
     scene bg_bbg
 
-    $GenAtt = -1.5
-    call act2_Gen_meet3
 
     $NameSpace = renpy.input("Введите имя главного героя (По умолчанию '[DefaultName]')").strip()
     "В процессе игры могут присутствовать сцены насилия и жестокости. Вы готовы их видеть?"
