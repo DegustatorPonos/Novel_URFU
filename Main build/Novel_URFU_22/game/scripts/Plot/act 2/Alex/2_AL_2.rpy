@@ -4,7 +4,7 @@
     show AlexSad at right
     show MCIdle at left
     mainChar "Саня, у тебя  все в порядке?"
-    if $AlexAtt < 0:
+    if AlexAtt < 0:
         jump Alex_meet4_bad
     else:
         jump Alex_meet4_good

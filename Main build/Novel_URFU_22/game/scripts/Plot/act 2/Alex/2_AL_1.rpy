@@ -7,7 +7,7 @@
     mainChar "Привет Сань, ты не мог бы... чем это ты занят?"
     hide AlexSmile
     show AlexIdle at right
-    if $AlexAtt < 0:
+    if AlexAtt < 0:
         Alex "Че? Работаю, прикинь?"
     else:
         Alex "Э-э-э, да так, ничем."
@@ -20,7 +20,7 @@
 
         "У меня дела":
             mainChar "Лады, я к тебе по делу пришел, посмотришь код мой? Я где то походу накосячил."
-            if $AlexAtt < 0:
+            if AlexAtt < 0:
                 Alex "Косячить это про тебя... давай, что там у тебя..."
             else:
                 Alex "Хорошо, сейчас посмотрим..."
@@ -28,7 +28,7 @@
 
 label Alex_meet3_bad:
     mainChar "Ну ну, работы немерено а ты тут какой то фигней страдаешь?"
-    if $AlexAtt < 0:
+    if AlexAtt < 0:
         Alex "Тебе то какое дело? Сам то че шляешься, никому работать не даешь!"
         menu:
             "Я работаю!":
@@ -50,7 +50,7 @@ label Alex_meet3_bad:
                 jump Alex_meet3_good
     hide AlexIdle
     show AlexSad at right
-    if $AlexAtt < 0:
+    if AlexAtt < 0:
         Alex "Что у тебя там..."
     else:
         Alex "Да пошел ты, быдлан! Вали отсюда!"
@@ -64,7 +64,7 @@ label Alex_meet3_good:
     menu:
         "У меня дело":
             mainChar "Лады, я к тебе по делу пришел, посмотришь код мой? Я где то походу накосячил."
-            if $AlexAtt < 0:
+            if AlexAtt < 0:
                 Alex "Косячить это про тебя... давай, что там у тебя..."
             else:
                 Alex "Хорошо, сейчас посмотрим..."
@@ -91,7 +91,7 @@ label Alex_meet3_good:
             Alex "Жаль."
             Alex "Что то хотел?"
             jump Alex_meet3_end
-    if $scoreVerseAlex_1 = 1:
+    if scoreVerseAlex_1 = 1:
         n '''Ты мне нужна
         Я вновь один, лежу, скучаю,
         Тепло в душе не ощущаю,

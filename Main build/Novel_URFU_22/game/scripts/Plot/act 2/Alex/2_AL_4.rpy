@@ -1,5 +1,5 @@
 ﻿label act2_Alex_meet6():
-    if $AlexAtt < -1:
+    if AlexAtt < -1:
         jump Alex_meet6_bad
     else:
         jump Alex_meet6_good
