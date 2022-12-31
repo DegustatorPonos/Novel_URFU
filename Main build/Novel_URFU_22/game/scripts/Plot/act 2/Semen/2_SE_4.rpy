@@ -1,5 +1,5 @@
 ﻿label act2_Semen_meet5():
-    if $SAtt < -6:
+    if SAtt < -6:
         jump Semen_meet5_bad_bad
     else:
         scene SenG
@@ -7,7 +7,7 @@
         show GalIdle
         show SemIdle at right
         mainChar "Добрый вечер, а что за чаепитие?"
-        if $SAtt > 0:
+        if SAtt > 0:
             Semen "Да так, работы нет вот и время коротаем, а что?"
         else:
             Semen "Добрый, а какое тебе дело?"
@@ -43,24 +43,24 @@ label Semen_meet5_bad():
     return
 
 label Semen_meet5_good():
-    if $SAtt < 0 and $GalAtt < 0:
+    if SAtt < 0 and GalAtt < 0:
        Galina "Нет, знаешь, мы тут так, по душам болтаем." 
        mainChar "Ладно, хорошо вам посидеть."
        jump Semen_meet5_end
-    elif $SAtt > 0:
+    elif SAtt > 0:
         Semen "Ну ладно, садись."
 
-    elif $GalAtt > 0:
+    elif GalAtt > 0:
         Galina "Конечно! Тебе покрепче налить?"
     "Вы садитесь за стол, пригнав к нему соседний свободный стул"
-    if $SAtt > $GalAtt:
+    if SAtt > GalAtt:
         Semen "Ну как оно, жив еще?"
     else:
         Galina "Ну как оно, жив еще?"
     mainChar "Ну, типо того. Жизнь потихоньку налаживается, деньги хоть появились и слава богу."
     Galina "Ну это просто замечательно! Повезло тебе с коллективом."
     mainChar "Ладно. Галина Петровна, а как ваше ничего?"
-    if $GalAtt >0:
+    if GalAtt >0:
         Galina "Просто замечательно!{w} Представляешь, недавно целая пачка пожертвований пришла от клуба собачников, и я даже задумалась свой мини приют открыть!{w} Остается лишь надеяться, что все и дальше будет так хорошо идти... еще чайку подлить?"
     else:
         Galina "Ну, ничего так, что сказать. Живу-доживаю себе. Еще чайку подлить?"
