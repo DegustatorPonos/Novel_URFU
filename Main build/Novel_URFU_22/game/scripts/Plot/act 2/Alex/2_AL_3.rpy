@@ -1,7 +1,7 @@
 ﻿label act2_Alex_meet5():
-    if $AlexAtt < -6:
+    if AlexAtt < -6:
         jump Alex_meet5_bad_bad
-    elif $AlexAtt > -6 and $AlexAtt < 0.5 and !AlexGoodAdvice:
+    elif AlexAtt > -6 and AlexAtt < 0.5 and !AlexGoodAdvice:
         jump Alex_meet5_bad
     else:
         jump Alex_meet5_good
@@ -48,7 +48,7 @@ label Alex_meet5_bad():
 
         "Смысл в стихах":
             mainChar "А чем твои стихи не смысл? Найди себе компанию по интересам! Есть же всякие кружки литераторов."
-    if $AlexAtt > -2.5:
+    if AlexAtt > -2.5:
         Alex "Издеваешься?{w} Да?"
         mainChar "Нисколько.{w} От того что ты девчонок таких вечно искать будешь ничего не изменится, тебе лучше от новой пары не становится, правда ведь?{w} И от этой... особы тебе только хуже будет, так сказать по опыту знаю."
         Alex "Э-эх, может быть ты и прав, но... что тогда? Что мне теперь делать?"
