@@ -3,13 +3,13 @@
     scene bg_office_director
     show MCIdle at left
     show EVIdle at right
-    if $EVhobby = 0: #ничего
+    if EVhobby == 0: #ничего
         jump EV_meet4_long
-    if else $EVhobby = 1: #цветы
+    if else EVhobby == 1: #цветы
         "В кабинете сидит Евгений Викторович."
         "На полках стоит множество растений"
         jump EV_meet4_short
-    if else $EVhobby = 5: #рукоделие
+    if else EVhobby == 5: #рукоделие
         "В кабинете сидит Евгений Викторович."
         "На полках стоит множество поделок"
         jump EV_meet3_short
@@ -28,7 +28,7 @@ label EV_meet4_short:
                     EV "Ну, возможно ты и прав. Что предложишь?"
                     menu:
                         "Не думали о питомце?":
-                           if $EVatt > 0.5:
+                           if EVatt > 0.5:
                                jump EV_meet4_2
                            else:
                                EV "Думал... {w}нет, давай закроем эту тему, ладно? Спасибо за совет. Зачем приходил?"
@@ -109,7 +109,7 @@ label EV_meet4_short:
 label EV_meet4_long:
     "Евгений Викторович сидит в пустом кабинете и плачет"
     mainChar "Евгений Викторович, я... что опять случилось?"
-    if $EVatt < -0.5:
+    if EVatt < -0.5:
         EV "Какая тебе разница?  Если по делам - выкладывай, не тяни!"
         jump EV_meet4_long_bad
     else:
