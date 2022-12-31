@@ -1,5 +1,6 @@
 define GenCoffe = False
 define GenQuestions = 0
+define GenDrinking = False
 
 label act2_Gen_meet2:
     "Вы выключаете компьютер."
@@ -162,6 +163,7 @@ label Gen_2_quesions:
                 Gennadiy "Короче, дам совет."
                 Gennadiy "Если хочешь человека оскорбить - делай это прямо."
             "Не хотите выпить на выходных?":
+                $GenDrinking = True
                 $GenAtt -= 2    
                 $GenQuestions += 1
                 mainChar "Не хотите выпить на выходных?"
